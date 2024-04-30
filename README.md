@@ -6,7 +6,7 @@ This project aims to train image detection models to augment and or enhance the 
 Our team evaluated and refined serveral machine learning models: Vision Transformer, U-Net with DenseNet-121, and YOLO on a pre-labelled brain tumour MRI
 scans dataset. 
 
-We have included a brief summary of our results and evaluated the potential impact of this project for real-world applications in supporting and augmenting the decision-making processes in medical diagnostics. For detailed results and evaluation, kindly reach out to us.
+We have included a brief summary of our results and evaluated the potential impact of this project for real-world applications in medical diagnostics. For detailed results and evaluation, kindly reach out to us.
 
 ## Table of Contents
 - [1. Installation and Setup](#1-installation-and-setup)
