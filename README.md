@@ -70,6 +70,7 @@ To install the necessary libraries directly into Google Colab, you may use the f
 !pip install torch torchvision torchmetrics pytorch_lightning monai timm
 ```
 
+
 ## 2. Dataset
 Our project utilizes a pre-labelled MRI brain tumor dataset from [Roboflow Universe](https://universe.roboflow.com/ali-rostami/labeled-mri-brain-tumor-dataset). 
 
@@ -84,18 +85,17 @@ The dataset was split into 1,695 training, 502 validation, and 246 test.
 ### 2.1 Data Preprocessing
 To enhance our model training process, we performed geometric transformations on the original dataset to double the total number of training images to 3,390 and validation images to 1,004 and preserved the same class balances; no augmentation was done for test data. 
 
+The following transformation techniques were used:
+- `Rotate`: Random rotations between -10° and 10°, to mimic head tilting and rotation.
+- `ShiftScaleRotate`: A combination of shifting and scaling (without rotate), for robustness against positional and size variations.
+- `HorizontalFlip`: Flips the image horizontally (left to right).
+- `ElasticTransform`: Elastic transformations, introducing non-linear deformations for mimicking real-world scanning inconsistencies.
+
+To run our codes successfully, kindly use the augmented datasets:
 - [Train dataset](https://drive.google.com/file/d/1Ig4FwFcuzyBOhBFz3Av3DSEsFtFV13yb/view?usp=sharing)
 - [Valid dataset](https://drive.google.com/file/d/1FxnLwNuHN1birGh24sTV5eR4bIRS75rx/view?usp=sharing)
 - [Test dataset](https://drive.google.com/file/d/1Ru6gLRWap6_s2wWCrBTmIEvDrnjKbhGo/view?usp=drive_link)
 
-**To run our codes successfully, kindly use the above datasets.** 
-
-The following augmentation techniques were used:
-- `Rotate`: Random rotations between -10° and 10°, to
-mimic head tilting and rotation.
-- `ShiftScaleRotate`: A combination of shifting and scaling (without rotate), for robustness against positional and size variations.
-- `HorizontalFlip`: Flips the image horizontally (left to right).
-- `ElasticTransform`: Elastic transformations, introducing non-linear deformations for mimicking real-world scanning inconsistencies.
 
 ## 3. Models
 We utilized three models for our analysis:
@@ -104,6 +104,7 @@ We utilized three models for our analysis:
 - [YOLO](insert github link)
 
 These models were selected based on their abilities to identify and adaptively learn critical details and features. These models also have diverse real world use cases. For example, VIT is prominent in the field of computer vision for its image classification abilities and has been adopted in fields with large datasets e.g. social media and e-commerce. U-Net was original designed and is widely adopted for medical imaging segmentation. YOLO has been widely adapted for traffic monitoring due to its speed and efficiency in real-time object detection.  
+
 
 ## 4. Results and Evaluation
 *For detailed results and evaluation, kindly reach out to us*
@@ -129,6 +130,7 @@ No single model is universally the best, rather each model is and can be tailore
 
 The main challenge across all models is their substantial computational demands and operational costs, which could be prohibitive in resource-limited settings.
 
+
 ## 5. Future Work
 This project was constrained largely in terms of computational resources which allowed us to only perform shallow-depth training and basic fine-tuning.
 
@@ -136,10 +138,12 @@ Future contributors can also consider expanding the dataset through additional l
 
 Nonetheless this project is still a valuable and reliable foundation for future modifications, enhancements and or other contributions.
 
+
 ## 6. Licenses
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
 
 The MIT License allows you to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, provided that the above copyright notice and this permission notice are included in all copies or substantial portions of the software.
+
 
 ## 7. Acknowledgements
 Once again we would like to express our deepest gratitude to Roboflow user *Ali Rostami* for the well labelled tumor dataset in [Roboflow Universe](https://universe.roboflow.com/ali-rostami/labeled-mri-brain-tumor-dataset). 
