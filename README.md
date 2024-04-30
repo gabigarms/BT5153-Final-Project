@@ -21,7 +21,7 @@ We have included a brief summary of our results and evaluated the potential impa
 Our project was run on Google Colab using Python 3. In addition, we utilized the following libraries, packages and dependencies for our analysis and model training. Kindly observe the recommended steps and requirements below, in order to replicate our environment and run our project.
 
 ### 1.1 Google Colab and Google Drive
-Our modelling was performed in Google Colab and ingests datasets which were stored in Google Drive. When using our codes, kindly download the dataset into your Google Drive and mount or replace with your corresponding working directories. See also [section 2.1](#21-data-preprocessing).
+Our modelling was performed in Google Colab and ingests datasets which were stored in Google Drive. When using our codes, kindly download the dataset into your Google Drive and mount or replace with your corresponding working directories. See also [section 2.2](#22-augmented-datasets).
 
 ### 1.2 Python Version
 Our codes are compatible with Python 3.6 and above. Google Colab typically provides the latest Python 3 version. 
@@ -91,7 +91,8 @@ The following transformation techniques were used:
 - `HorizontalFlip`: Flips the image horizontally (left to right).
 - `ElasticTransform`: Elastic transformations, introducing non-linear deformations for mimicking real-world scanning inconsistencies.
 
-To run our codes successfully, kindly use the augmented datasets:
+### 2.2 Augmented Datasets
+To run our codes successfully, kindly use our augmented datasets:
 - [Train dataset](https://drive.google.com/file/d/1Ig4FwFcuzyBOhBFz3Av3DSEsFtFV13yb/view?usp=sharing)
 - [Valid dataset](https://drive.google.com/file/d/1FxnLwNuHN1birGh24sTV5eR4bIRS75rx/view?usp=sharing)
 - [Test dataset](https://drive.google.com/file/d/1Ru6gLRWap6_s2wWCrBTmIEvDrnjKbhGo/view?usp=drive_link)
