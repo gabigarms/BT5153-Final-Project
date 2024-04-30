@@ -3,11 +3,10 @@
 ## Description
 This project aims to train image detection models to augment and or enhance the diagnostic accuracy of medical professionals in the early detection of brain tumors.
 
-We evaluated and refined serveral machine learning models: Vision Transformer, U-Net with DenseNet-121, and
-YOLO on a pre-labelled brain tumour MRI
+Our team evaluated and refined serveral machine learning models: Vision Transformer, U-Net with DenseNet-121, and YOLO on a pre-labelled brain tumour MRI
 scans dataset. 
 
-We have included our insights into the methodology, challenges and the potential impact of this project in its real-world ability to support and augment decision-making processes in medical diagnostics.
+We have included a brief summary of our results and evaluated the potential impact of this project for real-world applications in supporting and augmenting the decision-making processes in medical diagnostics. For detailed results and evaluation, kindly reach out to us.
 
 ## Table of Contents
 - [1. Installation and Setup](#1-installation-and-setup)
@@ -74,7 +73,7 @@ To install the necessary libraries directly into Google Colab, you may use the f
 ## 2. Dataset
 Our project utilizes a pre-labelled MRI brain tumor dataset from [Roboflow Universe](https://universe.roboflow.com/ali-rostami/labeled-mri-brain-tumor-dataset). 
 
-The [original dataset](insert github link) comprises 2,443 jpg images with a 640 x 640 resolution. Accompanying each image file is a text label file that details the tumor type and bounding box coordinates. Each pair of image and label files share the same name with a prefix indicating the tumor type as follows:
+The original dataset comprises 2,443 jpg images with a 640 x 640 resolution. Accompanying each image file is a text label file that details the tumor type and bounding box coordinates. Each pair of image and label files share the same name with a prefix indicating the tumor type as follows:
 - *Tr-pi*: representing Pituitary tumors (class 3 label) 
 - *Tr-me*: representing Meningioma tumors (class 1 label)
 - *Tr-gl*: representing Glioma tumors (class 0 label)
@@ -83,7 +82,7 @@ The [original dataset](insert github link) comprises 2,443 jpg images with a 640
 The dataset was split into 1,695 training, 502 validation, and 246 test. 
 
 ### 2.1 Data Preprocessing
-To enhance our model training process, we performed geometric transformations on the original dataset to double the total number of images to 3,390. We maintained the same class balances and train-validation-test splits for the [augmented dataset](insert github link).
+To enhance our model training process, we performed geometric transformations on the original dataset to double the total number of images to 3,390. We maintained the same class balances and train-validation-test splits for the [augmented dataset](insert github link). **To successfully run our codes, kindly use the augmented dataset.** 
 
 The following augmentation techniques were used:
 - `Rotate`: Random rotations between -10° and 10°, to
@@ -94,22 +93,35 @@ mimic head tilting and rotation.
 
 ## 3. Models
 We utilized three models for our analysis:
-- [Vision Transformer (ViT)](insert github link)
-- [U-Net with DenseNet121](insert github link)
+- [Vision Transformer (ViT)](https://github.com/gabigarms/BT5153-Final-Project/blob/main/codes/vit.ipynb)
+- [U-Net with DenseNet121](https://github.com/gabigarms/BT5153-Final-Project/blob/main/codes/unet_densenet.ipynb)
 - [YOLO](insert github link)
 
 These models were selected based on their abilities to identify and adaptively learn critical details and features. These models also have diverse real world use cases. For example, VIT is prominent in the field of computer vision for its image classification abilities and has been adopted in fields with large datasets e.g. social media and e-commerce. U-Net was original designed and is widely adopted for medical imaging segmentation. YOLO has been widely adapted for traffic monitoring due to its speed and efficiency in real-time object detection.  
 
 ## 4. Results and Evaluation
+*For detailed results and evaluation, kindly reach out to us*
+
 To ensure a consistent and comprehensive analysis of all three models, we adopted three standard metrics for evaluation:
 - **Precision**: Measures the accuracy of the tumor predictions.
 - **Recall**: Indicates how well the model identifies actual tumors.
 - **F1 Score**: Provides a balanced measure of precision and recall, serving as a single metric for overall model performance.
 
+### 4.1 Baseline and Fine-tuning
+All models were trained and finetuned using strategies tailored specifically for each. You may view the baseline and fine-tuned results for each model in our [images folder](https://github.com/gabigarms/BT5153-Final-Project/tree/main/images). Please reach out to us for detailed information on our modelling and fine-tuning methodologies.
 
-...
+### 4.2 Consolidated Results
+The consolidated best results from each model suggest the following:
+![Consolidated Results](https://raw.githubusercontent.com/gabigarms/BT5153-Final-Project/main/images/consolidated_results.jpg "Consolidated Results after Fine-tuning")
 
-...
+- **ViT:** Achieved an F1 score of 0.791, and is ideal for complex diagnostic tasks requiring detailed image analysis in research-driven or large-scale applications. However, it demands significant computational resources.
+- **U-Net with DenseNet-121:** Scored a mean F1 of 0.901, excelling in precise image segmentation and classification. This model is suitable for structured diagnostic environments but like ViT, requires considerable computational resources (*we used the simple mean of U-Net and DenseNet-121's F1 scores*). 
+- **YOLOv8n:** With an F1 score of 0.903, this model stands out in clinical scenarios where speed is critical. It offers rapid diagnosis capabilities, making it essential in emergency settings, although it may trade off some precision for speed..
+
+### 4.3 Summary Recommendations 
+No single model is universally the best, rather each model is and can be tailored to certain specific needs and scenarios e.g. ViT can be used in medical research for its depth and detail in resource-abundant settings; U-Net and DenseNet-121 for accuracy in structured medical imaging workflows; and YOLOv8n for speed in medical emergency imaging workflows.
+
+The main challenge across all models is their substantial computational demands and operational costs, which could be prohibitive in resource-limited settings.
 
 ## 5. Future Work
 This project was constrained largely in terms of computational resources which allowed us to only perform shallow-depth training and basic fine-tuning.
