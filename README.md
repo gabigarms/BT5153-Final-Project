@@ -84,9 +84,9 @@ The dataset was split into 1,695 training, 502 validation, and 246 test.
 ### 2.1 Data Preprocessing
 To enhance our model training process, we performed geometric transformations on the original dataset to double the total number of training images to 3,390 and validation images to 1,004 and preserved the same class balances; no augmentation was done for test data. 
 
-- [train dataset](https://drive.google.com/file/d/1ukyyDo_un4J7DDEJVLv7zFkFwoAI-Z7r/view?usp=drive_link)
-- [test dataset](https://drive.google.com/file/d/1Ru6gLRWap6_s2wWCrBTmIEvDrnjKbhGo/view?usp=drive_link)
-- [valid dataset](https://drive.google.com/file/d/1GaLeWO7Xm0cfdOYDmPVAtQ2NqNjIQURC/view?usp=drive_link)
+- [Train dataset](https://drive.google.com/file/d/1ukyyDo_un4J7DDEJVLv7zFkFwoAI-Z7r/view?usp=drive_link)
+- [Test dataset](https://drive.google.com/file/d/1Ru6gLRWap6_s2wWCrBTmIEvDrnjKbhGo/view?usp=drive_link)
+- [Valid dataset](https://drive.google.com/file/d/1GaLeWO7Xm0cfdOYDmPVAtQ2NqNjIQURC/view?usp=drive_link)
 
 **To run our codes successfully, kindly use the augmented dataset.** 
 
