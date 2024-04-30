@@ -21,7 +21,7 @@ We have included a brief summary of our results and evaluated the potential impa
 Our project was run on Google Colab using Python 3. In addition, we utilized the following libraries, packages and dependencies for our analysis and model training. Kindly observe the recommended steps and requirements below, in order to replicate our environment and run our project.
 
 ### 1.1 Google Colab and Google Drive
-Our modelling was performed in Google Colab and ingests datasets which were stored in Google Drive. When using our codes, kindly download the dataset into your Google Drive and mount or replace with your corresponding working directories.
+Our modelling was performed in Google Colab and ingests datasets which were stored in Google Drive. When using our codes, kindly download the dataset into your Google Drive and mount or replace with your corresponding working directories. See also [section 2.1](#21-data-preprocessing).
 
 ### 1.2 Python Version
 Our codes are compatible with Python 3.6 and above. Google Colab typically provides the latest Python 3 version. 
@@ -82,7 +82,13 @@ The original dataset comprises 2,443 jpg images with a 640 x 640 resolution. Acc
 The dataset was split into 1,695 training, 502 validation, and 246 test. 
 
 ### 2.1 Data Preprocessing
-To enhance our model training process, we performed geometric transformations on the original dataset to double the total number of images to 3,390. We maintained the same class balances and train-validation-test splits for the [augmented dataset](insert github link). **To successfully run our codes, kindly use the augmented dataset.** 
+To enhance our model training process, we performed geometric transformations on the original dataset to double the total number of training images to 3,390 and validation images to 1,004 and preserved the same class balances; no augmentation was done for test data. 
+
+- [train dataset](https://drive.google.com/file/d/1ukyyDo_un4J7DDEJVLv7zFkFwoAI-Z7r/view?usp=drive_link)
+- [test dataset](https://drive.google.com/file/d/1Ru6gLRWap6_s2wWCrBTmIEvDrnjKbhGo/view?usp=drive_link)
+- [valid dataset](https://drive.google.com/file/d/1GaLeWO7Xm0cfdOYDmPVAtQ2NqNjIQURC/view?usp=drive_link)
+
+**To run our codes successfully, kindly use the augmented dataset.** 
 
 The following augmentation techniques were used:
 - `Rotate`: Random rotations between -10° and 10°, to
