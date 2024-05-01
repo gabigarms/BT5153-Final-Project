@@ -102,7 +102,7 @@ To run our codes successfully, kindly use our augmented datasets:
 We utilized three models for our analysis:
 - [Vision Transformer (ViT)](https://github.com/gabigarms/BT5153-Final-Project/blob/main/codes/vit.ipynb)
 - [U-Net with DenseNet121](https://github.com/gabigarms/BT5153-Final-Project/blob/main/codes/unet_densenet.ipynb)
-- [YOLO](insert github link)
+- [YOLO](https://github.com/gabigarms/BT5153-Final-Project/blob/main/codes/yolo.ipynb)
 
 These models were selected based on their abilities to identify and adaptively learn critical details and features. These models also have diverse real world use cases. For example, VIT is prominent in the field of computer vision for its image classification abilities and has been adopted in fields with large datasets e.g. social media and e-commerce. U-Net was original designed and is widely adopted for medical imaging segmentation. YOLO has been widely adapted for traffic monitoring due to its speed and efficiency in real-time object detection.  
 
