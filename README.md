@@ -122,9 +122,9 @@ All models were trained and finetuned using strategies tailored specifically for
 The consolidated best results from each model suggest the following:
 ![Consolidated Results](https://raw.githubusercontent.com/gabigarms/BT5153-Final-Project/main/images/consolidated_results.jpg "Consolidated Results after Fine-tuning")
 
-- **ViT:** Achieved an F1 score of 0.823, and is ideal for complex diagnostic tasks requiring detailed image analysis in research-driven or large-scale applications. However, it demands significant computational resources.
-- **U-Net with DenseNet-121:** Scored a mean F1 of 0.902, excelling in precise image segmentation and classification. This model is suitable for structured diagnostic environments but like ViT, requires considerable computational resources (*we used the simple mean of U-Net and DenseNet-121's F1 scores*). 
-- **YOLOv8n:** With an F1 score of 0.906, this model stands out in clinical scenarios where speed is critical. It offers rapid diagnosis capabilities, making it essential in emergency settings, although it may trade off some precision for speed..
+- **ViT:** Achieved an F1 score of 0.837, and is ideal for complex diagnostic tasks requiring detailed image analysis in research-driven or large-scale applications. However, it demands significant computational resources.
+- **U-Net with DenseNet-121:** Scored a mean F1 of 0.901, excelling in precise image segmentation and classification. This model is suitable for structured diagnostic environments but like ViT, requires considerable computational resources (*we used the simple mean of U-Net and DenseNet-121's F1 scores*). 
+- **YOLOv8n:** With an F1 score of 0.903, this model stands out in clinical scenarios where speed is critical. It offers rapid diagnosis capabilities, making it essential in emergency settings, although it may trade off some precision for speed..
 
 ### 4.3 Summary Recommendations 
 No single model is universally the best, rather each model is and can be tailored to certain specific needs and scenarios e.g. ViT can be used in medical research for its depth and detail in resource-abundant settings; U-Net and DenseNet-121 for accuracy in structured medical imaging workflows; and YOLOv8n for speed in medical emergency imaging workflows.
